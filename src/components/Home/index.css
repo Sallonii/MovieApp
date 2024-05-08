@@ -1,0 +1,37 @@
+.home-main-container {
+  background-image: url('https://res.cloudinary.com/dwj8ezxgi/image/upload/v1714582076/wp2581913-man-of-steel-wallpaper_1_s9tgy2.png');
+  background-size: cover;
+  height: 55vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.home-content-container {
+  margin: 20px;
+}
+.super-man-heading {
+  color: white;
+}
+.super-man-description {
+  color: white;
+  font-weight: 700;
+}
+.play-btn {
+  background-color: white;
+  color: black;
+  border: none;
+  width: 80px;
+  padding: 8px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.movies-list-container {
+  background-color: black;
+  padding: 10px;
+  min-height: 40vh;
+  color: white;
+}
+.home-heading {
+  font-size: 15px;
+}

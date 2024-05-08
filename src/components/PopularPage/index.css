@@ -1,0 +1,24 @@
+.popular-page-container {
+  background-color: black;
+  min-height: 100vh;
+  padding: 5px;
+}
+.popular-movie-item {
+  width: 90px;
+  height: 140px;
+  margin: 10px;
+}
+.movie-items-ul-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-wrap: wrap;
+  padding: 0;
+  overflow-y: scroll;
+  height: 500px;
+}
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
