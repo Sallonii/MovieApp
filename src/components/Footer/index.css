@@ -1,0 +1,11 @@
+.icons-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 20px;
+  color: white;
+}
+.contact-text {
+  text-align: center;
+  color: white;
+}

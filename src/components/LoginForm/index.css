@@ -1,0 +1,46 @@
+.login-page-bg-container {
+  background-color: black;
+  min-height: 100vh;
+  padding: 2px;
+}
+.login-page-container {
+  margin: 20px;
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form {
+  color: white;
+  width: 400px;
+}
+.form-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8px;
+}
+label {
+  margin-bottom: 3px;
+}
+input {
+  background-color: #333333;
+  padding: 10px;
+  color: white;
+  outline: none;
+  border-radius: 7px;
+  border: none;
+}
+.sign-in-button {
+  width: 100%;
+  margin-top: 20px;
+  background-color: #e50014;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 7px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.err-msg {
+  color: #e50014;
+}

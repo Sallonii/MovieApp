@@ -1,0 +1,9 @@
+.slider-container {
+  padding: 15px;
+  background-color: rgba(20, 18, 18, 0.889);
+  height: 80px;
+}
+.movie-item {
+  padding: 3px;
+  border-radius: 10px;
+}
