@@ -4,11 +4,21 @@ import './index.css'
 
 import Cookies from 'js-cookie'
 
+import Loader from 'react-loader-spinner'
+import {Link} from 'react-router-dom'
+
 import Header from '../Header'
 import Footer from '../Footer'
 
+const apiConstants = {
+  success: 'SUCCESS',
+  failure: 'FAILURE',
+  inProgress: 'IN_PROGRESS',
+  initial: 'INITIAL',
+}
+
 class PopularPage extends Component {
-  state = {moviesList: []}
+  state = {moviesList: [], pageStatus: apiConstants.initial}
 
   componentDidMount() {
     this.getPopularMoviesList()
@@ -21,10 +31,14 @@ class PopularPage extends Component {
       backdropPath: eachMovie.backdrop_path,
       posterPath: eachMovie.poster_path,
     }))
-    this.setState({moviesList: updatedMoviesList})
+    this.setState({
+      moviesList: updatedMoviesList,
+      pageStatus: apiConstants.success,
+    })
   }
 
   getPopularMoviesList = async () => {
+    this.setState({pageStatus: apiConstants.inProgress})
     const jwtToken = Cookies.get('jwt_token')
     const options = {
       method: 'GET',
@@ -42,22 +56,52 @@ class PopularPage extends Component {
     }
   }
 
-  render() {
+  renderPopularPage = () => {
     const {moviesList} = this.state
     return (
-      <div className="popular-page-container">
-        <Header />
-        <ul className="movie-items-ul-container">
-          {moviesList.map(eachMovie => (
-            <li key={eachMovie.id}>
+      <ul className="movie-items-ul-container">
+        {moviesList.map(eachMovie => (
+          <Link
+            to={`/movies/${eachMovie.id}`}
+            key={eachMovie.id}
+            className="nav-item"
+          >
+            <li>
               <img
                 alt={eachMovie.title}
                 src={eachMovie.posterPath}
                 className="popular-movie-item"
               />
             </li>
-          ))}
-        </ul>
+          </Link>
+        ))}
+      </ul>
+    )
+  }
+
+  renderLoader = () => (
+    <div className="popular-loader-container" testid="loader">
+      <Loader type="TailSpin" color="#D81F26" height={50} width={50} />
+    </div>
+  )
+
+  renderList = () => {
+    const {pageStatus} = this.state
+    switch (pageStatus) {
+      case apiConstants.success:
+        return this.renderPopularPage()
+      case apiConstants.inProgress:
+        return this.renderLoader()
+      default:
+        return null
+    }
+  }
+
+  render() {
+    return (
+      <div className="popular-page-container">
+        <Header />
+        {this.renderList()}
         <Footer />
       </div>
     )
