@@ -3,7 +3,9 @@
   padding: 2px;
   min-height: 10vh;
   width: 100%;
-
+  position: fixed;
+  top: 0;
+  z-index: 2;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -18,10 +20,15 @@
   cursor: pointer;
 }
 .hamburger-container {
+  position: fixed; /* Position the hamburger container fixed */
+  top: calc(10vh + 2px); /* Position it just below the header */
+  width: 100%; /* Occupy full width */
+  background-color: transparent; /* Semi-transparent background */
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   color: white;
+  z-index: 1;
 }
 p {
   color: white;
