@@ -26,7 +26,9 @@ class Header extends Component {
         <div className="header-container">
           <h1 className="logo">MOVIES</h1>
           <div>
-            <FaSearch className="react-icon" />
+            <Link to="/search">
+              <FaSearch className="react-icon" />
+            </Link>
             <RiListSettingsFill
               className="react-icon"
               onClick={this.onClickingHamburgerIcon}
