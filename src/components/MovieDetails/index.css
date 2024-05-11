@@ -1,4 +1,3 @@
-
 .movie-main-container {
   background-color: black;
   min-height: 100vh;
@@ -42,11 +41,8 @@
 .movie-details-ul-container {
   display: flex;
   justify-content: flex-start;
-  align-items: center;
 
   flex-wrap: wrap;
-  border-style: solid;
-  border-color: white;
   padding: 0;
 }
 li {
@@ -56,11 +52,27 @@ li {
 .list-content-heading {
   color: rgb(45, 59, 88);
   font-size: 15px;
-  font-family: Bree Serif;
+  font-weight: 400;
 }
 .list-content-item {
   font-size: 15px;
 }
 .genre-ul-cont {
   padding: 0;
+}
+.similar-movies-container {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.list-item {
+  list-style-type: none;
+  margin: 10px;
+}
+.similar-image {
+  height: 50px;
+  border-radius: 7px;
 }
