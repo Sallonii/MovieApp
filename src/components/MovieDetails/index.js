@@ -7,6 +7,10 @@ import Header from '../Header'
 
 import './index.css'
 
+import Footer from '../Footer'
+
+const {format} = require('date-fns')
+
 const apiConstants = {
   success: 'SUCCESS',
   failure: 'FAILURE',
@@ -127,7 +131,17 @@ class MovieDetails extends Component {
 
   renderMovieDetailsBottomPage = () => {
     const {movieDetails} = this.state
-    const {genres} = movieDetails
+    const {
+      genres,
+      languages,
+      voteCount,
+      voteAverage,
+      budget,
+      releaseDate,
+      similarMovies,
+    } = movieDetails
+    const inputDate = new Date(releaseDate)
+    const formattedDate = format(inputDate, 'do MMMM yyyy')
     return (
       <div className="movie-details-bottom-container">
         <ul className="movie-details-ul-container">
@@ -143,24 +157,42 @@ class MovieDetails extends Component {
           </li>
           <li>
             <h1 className="list-content-heading">Audio Available</h1>
-            <p className="list-content-item">Action</p>
-            <p className="list-content-item">Superhero</p>
-            <p className="list-content-item">Fantasy</p>
-            <p className="list-content-item">adventure</p>
+            <ul className="genre-ul-cont">
+              {languages.map(eachLanguages => (
+                <li key={eachLanguages.id}>
+                  <p className="list-content-item">
+                    {eachLanguages.englishName}
+                  </p>
+                </li>
+              ))}
+            </ul>
           </li>
           <li>
             <h1 className="list-content-heading">Rating Count</h1>
-            <p className="list-content-item">Action</p>
+            <p className="list-content-item">{voteCount}</p>
             <h1 className="list-content-heading">Rating Average</h1>
-            <p className="list-content-item">Fantasy</p>
+            <p className="list-content-item">{voteAverage}</p>
           </li>
           <li>
             <h1 className="list-content-heading">Budget</h1>
-            <p className="list-content-item">Action</p>
+            <p className="list-content-item">{budget}</p>
             <h1 className="list-content-heading">Release Date</h1>
-            <p className="list-content-item">Fantasy</p>
+            <p className="list-content-item">{formattedDate}</p>
           </li>
         </ul>
+        <h1>More Like This</h1>
+        <ul className="similar-movies-container">
+          {similarMovies.map(eachMovie => (
+            <li className="list-item" key={eachMovie.id}>
+              <img
+                alt={eachMovie.title}
+                src={eachMovie.backdropPath}
+                className="similar-image"
+              />
+            </li>
+          ))}
+        </ul>
+        <Footer />
       </div>
     )
   }
