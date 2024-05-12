@@ -24,7 +24,9 @@ class Header extends Component {
     return (
       <>
         <div className="header-container">
-          <h1 className="logo">MOVIES</h1>
+          <Link to="/" className="nav-item">
+            <h1 className="logo">MOVIES</h1>
+          </Link>
           <div>
             <Link to="/search">
               <FaSearch className="react-icon" />
