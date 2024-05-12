@@ -1,0 +1,45 @@
+.account-main-container {
+  background-color: black;
+  min-height: 100vh;
+  padding-top: 12vh;
+}
+.account-card-container {
+  background-color: white;
+  height: 80vh;
+  padding: 20px;
+}
+.alignment-container {
+  display: flex;
+}
+.heading-text {
+  font-size: 20px;
+  color: rgb(172, 169, 169);
+  margin-right: 30px;
+}
+.username {
+  color: black;
+  font-weight: 600;
+}
+.password {
+  color: rgb(172, 169, 169);
+  font-weight: 700;
+}
+span {
+  border-style: solid;
+  border-width: 1px;
+  padding: 2px;
+}
+.btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logout-btn {
+  background-color: red;
+  border-radius: 8px;
+  padding: 10px;
+  width: 90px;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
