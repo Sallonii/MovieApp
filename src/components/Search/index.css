@@ -1,1 +1,101 @@
+.search-page-container {
+  background-color: black;
+  min-height: 100vh;
+  padding: 5px;
+}
+.header-container {
+  background-color: rgba(0, 0, 0, 0.416);
+  padding: 2px;
+  min-height: 10vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  color: #e50014;
+  padding-left: 20px;
+}
+.search-hamburger-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.input-container {
+  border-style: solid;
+  border-color: white;
+  border-width: 1px;
+  margin-right: 5px;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+}
+.react-icon {
+  color: white;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.input-element {
+  background-color: transparent;
+}
+.hamburger-container {
+  position: fixed; /* Position the hamburger container fixed */
+  top: calc(10vh + 2px); /* Position it just below the header */
+  width: 100%; /* Occupy full width */
+  background-color: transparent; /* Semi-transparent background */
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: white;
+  z-index: 1;
+}
+p {
+  color: white;
+  cursor: pointer;
+}
+.close-btn {
+  cursor: pointer;
+}
+.link-item {
+  text-decoration: none;
+}
 
+.searched-movies-ul-container {
+  margin-top: 15vh;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.searched-movie-image {
+  height: 80px;
+  border-radius: 7px;
+  margin: 5px;
+}
+.search-page-loader-container {
+  height: 90vh;
+  margin-top: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(23, 20, 20);
+  margin: 20px;
+}
+.no-search-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+  margin-top: 15px;
+  height: 90vh;
+}
+p {
+  color: white;
+}
