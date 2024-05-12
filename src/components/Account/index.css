@@ -1,11 +1,11 @@
 .account-main-container {
   background-color: black;
   min-height: 100vh;
-  padding-top: 12vh;
+  padding-top: 15vh;
 }
 .account-card-container {
   background-color: white;
-  height: 80vh;
+  height: 70vh;
   padding: 20px;
 }
 .alignment-container {
