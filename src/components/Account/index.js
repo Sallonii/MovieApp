@@ -1,6 +1,7 @@
 import './index.css'
 
 import Header from '../Header'
+import Footer from '../Footer'
 
 const Account = () => (
   <div className="account-main-container">
@@ -29,6 +30,7 @@ const Account = () => (
         </button>
       </div>
     </div>
+    <Footer />
   </div>
 )
 
