@@ -71,12 +71,13 @@ class ReactSlick extends Component {
     return (
       <Slider {...settings}>
         {moviesList.map(eachMovie => (
-          <img
-            className="movie-item"
-            key={eachMovie.id}
-            alt={eachMovie.title}
-            src={eachMovie.backdropPath}
-          />
+          <div key={eachMovie.id}>
+            <img
+              className="movie-item"
+              alt={eachMovie.title}
+              src={eachMovie.backdropPath}
+            />
+          </div>
         ))}
       </Slider>
     )
