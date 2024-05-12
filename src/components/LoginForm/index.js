@@ -29,7 +29,6 @@ class LoginForm extends Component {
   }
 
   onLoginFailure = errorMessage => {
-    console.log(errorMessage)
     this.setState({showErrorMsg: true, errorMessage})
   }
 
