@@ -6,6 +6,7 @@
 .movie-item {
   padding: 3px;
   border-radius: 10px;
+  height: 6vh;
 }
 .slick-loader-container {
   display: flex;
