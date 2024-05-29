@@ -10,6 +10,7 @@ import Loader from 'react-loader-spinner'
 import Header from '../Header'
 import ReactSlick from '../ReactSlick'
 import Footer from '../Footer'
+import FailureView from '../FailureView'
 
 const apiConstants = {
   success: 'SUCCESS',
@@ -90,6 +91,12 @@ class Home extends Component {
     </div>
   )
 
+  reload = () => {
+    this.getHomeDetails()
+  }
+
+  renderFailureView = () => <FailureView reload={this.reload} />
+
   renderHomePage = () => {
     const {homeStatus} = this.state
     switch (homeStatus) {
@@ -97,6 +104,8 @@ class Home extends Component {
         return this.renderHome()
       case apiConstants.inProgress:
         return this.renderLoader()
+      case apiConstants.failure:
+        return this.renderFailureView()
       default:
         return null
     }
@@ -104,7 +113,9 @@ class Home extends Component {
 
   render() {
     const {homeDetails} = this.state
-    const {posterPath} = homeDetails
+    const {posterPath, backdropPath} = homeDetails
+    console.log(posterPath)
+    console.log(backdropPath)
     const jwtToken = Cookies.get('jwt_token')
     if (jwtToken === undefined) {
       return <Redirect to="/login" />
@@ -113,7 +124,7 @@ class Home extends Component {
       <>
         <div
           className="home-main-container"
-          style={{backgroundImage: `url('${posterPath}')`}}
+          style={{backgroundImage: `url('${posterPath}')`}} // Here, how do I implement different images based on different sizes
         >
           <Header />
           {this.renderHomePage()}
