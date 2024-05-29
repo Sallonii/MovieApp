@@ -1,0 +1,23 @@
+.failure-view-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  height: 100%;
+}
+.alert-triangle-icon {
+  color: red;
+  font-size: 10vh;
+}
+.failure-view-heading {
+  color: white;
+  font-size: 1vh;
+  text-align: center;
+}
+.try-again-btn {
+  padding: 5px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
