@@ -10,6 +10,8 @@ import 'slick-carousel/slick/slick-theme.css'
 
 import './index.css'
 
+import FailureView from '../FailureView'
+
 const apiConstants = {
   success: 'SUCCESS',
   failure: 'FAILURE',
@@ -89,6 +91,12 @@ class ReactSlick extends Component {
     </div>
   )
 
+  reload = () => {
+    this.getMoviesList()
+  }
+
+  renderFailureView = () => <FailureView reload={this.reload} />
+
   renderMovies = () => {
     const {movieStatus} = this.state
     switch (movieStatus) {
@@ -96,6 +104,8 @@ class ReactSlick extends Component {
         return this.myMoviesList()
       case apiConstants.inProgress:
         return this.renderLoader()
+      case apiConstants.failure:
+        return this.renderFailureView()
       default:
         return null
     }
