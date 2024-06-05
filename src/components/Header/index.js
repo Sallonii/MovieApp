@@ -32,7 +32,7 @@ class Header extends Component {
               <FaSearch className="react-icon" />
             </Link>
             <RiListSettingsFill
-              className="react-icon"
+              className="react-icon mobile-view-icon"
               onClick={this.onClickingHamburgerIcon}
             />
           </div>
