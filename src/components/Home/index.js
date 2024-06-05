@@ -124,7 +124,7 @@ class Home extends Component {
       <>
         <div
           className="home-main-container"
-          style={{backgroundImage: `url('${posterPath}')`}} // Here, how do I implement different images based on different sizes
+          style={{backgroundImage: `url('${backdropPath}')`}} // Here, how do I implement different images based on different sizes
         >
           <Header />
           {this.renderHomePage()}
