@@ -67,7 +67,7 @@ class ReactSlick extends Component {
     const {moviesList} = this.state
     const settings = {
       dots: true,
-      slidesToShow: 3,
+      slidesToShow: 4,
       slidesToScroll: 1,
     }
     return (
@@ -77,7 +77,7 @@ class ReactSlick extends Component {
             <img
               className="movie-item"
               alt={eachMovie.title}
-              src={eachMovie.backdropPath}
+              src={eachMovie.posterPath}
             />
           </div>
         ))}
