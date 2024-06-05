@@ -3,10 +3,16 @@
   background-color: rgba(20, 18, 18, 0.889);
   height: 80px;
 }
+@media screen and (min-width: 767px) {
+  .slider-container {
+    height: 120px;
+    width: 80%;
+  }
+}
 .movie-item {
   padding: 3px;
   border-radius: 10px;
-  height: 6vh;
+  height: 14vh;
 }
 .slick-loader-container {
   display: flex;
