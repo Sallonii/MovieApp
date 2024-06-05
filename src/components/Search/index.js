@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 import {IoMdCloseCircle} from 'react-icons/io'
 
 import {RiListSettingsFill} from 'react-icons/ri'
-import {FaSearch} from 'react-icons/fa'
+import {HiOutlineSearch} from 'react-icons/hi'
 
 import Loader from 'react-loader-spinner'
 
@@ -96,7 +96,7 @@ class Search extends Component {
                 className="input-container"
                 testid="searchButton"
               >
-                <FaSearch className="react-icon" />
+                <HiOutlineSearch className="react-icon" />
                 <input
                   type="text"
                   className="input-element"
