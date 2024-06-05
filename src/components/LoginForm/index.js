@@ -99,7 +99,7 @@ class LoginForm extends Component {
             {this.renderPasswordField()}
             {showErrorMsg && <p className="err-msg">{errorMessage}</p>}
             <button type="submit" className="sign-in-button">
-              Sign in
+              Login
             </button>
           </form>
         </div>
