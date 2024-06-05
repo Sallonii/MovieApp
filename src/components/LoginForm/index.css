@@ -3,21 +3,29 @@
   min-height: 100vh;
   padding: 2px;
 }
-.login-page-container {.login-page-bg-container {
+
+.login-page-container {
   background-color: black;
   min-height: 100vh;
   padding: 2px;
-}
-.login-page-container {
-  margin: 20px;
-  min-height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
+@media screen and (min-width: 767px) {
+  .login-page-container {
+    background-image: url('https://res.cloudinary.com/dwj8ezxgi/image/upload/v1717581662/netfilx_1_he2stz.png');
+    background-color: transparent;
+  }
+}
+
 .form {
   color: white;
   width: 400px;
+  background-color: rgba(0, 0, 0, 0.759);
+  border-radius: 10px;
+  padding: 10px;
 }
 .form-item {
   display: flex;
@@ -50,12 +58,6 @@ input {
   color: #e50014;
 }
 
-  margin: 20px;
-  min-height: 80vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .form {
   color: white;
   width: 400px;
